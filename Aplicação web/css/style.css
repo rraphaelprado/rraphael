@@ -1,0 +1,500 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    font-family: "Inter", sans-serif;
+}
+
+/* Estilo geral do corpo */
+body {
+    background-color: #f5f5f5; /* Fundo suave claro */
+    color: #333333; /* Texto em cinza escuro para contraste */
+}
+
+/* Seções e rodapé */
+section,
+footer {
+    padding: 54px 0;
+}
+
+/* Títulos */
+h3 {
+    font-size: 50px;
+    color: #4b2f86; /* Roxo suave */
+}
+
+/* Parágrafos */
+p {
+    color: #000000; /* Texto preto */
+}
+
+/* Contêiner principal */
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+/* Botão padrão */
+.btn {
+    background-color: #f29c11; /* Laranja suave */
+    color: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: inline-block;
+    transition: 0.3s ease; /* Suaviza a transição */
+}
+
+/* Efeito hover no botão */
+.btn:hover {
+    background-color: #d47a08; /* Laranja mais escuro */
+}
+
+/* Botão animado */
+.btn.animate-btn {
+    animation: animate-outline 1.2s ease-out infinite;
+}
+
+/* Animação do botão */
+@keyframes animate-outline {
+    from {
+        box-shadow: 0 0 5px rgba(242, 156, 17, 0.6); /* Laranja suave */
+    }
+    to {
+        box-shadow: 0 0 10px 15px rgba(242, 156, 17, 0.6); /* Laranja suave */
+    }
+}
+
+/* Header */
+header {
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Navegação */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 30px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+}
+
+nav ul a {
+    color: purple;
+    margin: 0 25px;
+    text-transform: uppercase;
+    font-size: 14px;
+    display: block;
+}
+
+nav ul a:not(.btn)::after {
+    content: "";
+    background-color: #ffffff; /* Branco */
+    height: 3px;
+    width: 0%;
+    display: block;
+    transition: 0.3s;
+    margin: 0 auto;
+}
+
+nav ul a:hover::after {
+    width: 100%;
+}
+
+nav .menu-icon {
+    cursor: pointer;
+    font-size: 25px;
+    color: purple;
+    display: none;
+}
+
+nav .close-icon {
+    display: none;
+    font-size: 30px;
+    color: purple;
+}
+
+/* Banner */
+.banner {
+    display: flex;
+    justify-content: center;
+}
+
+.banner .banner-text {
+    margin: 150px;
+    text-align: center;
+    padding: 0 90px;
+}
+
+.banner .banner-text h1 {
+    font-size: 96px;
+    color: purple;
+}
+
+.banner .banner-text p {
+    font-size: 20px;
+    color: purple;
+    font-weight: lighter;
+    margin: 18px 0;
+}
+
+/* Seção "Faça mais" */
+.faca-mais .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.faca-mais .faca-mais-text {
+    width: 50%;
+    padding: 0 40px;
+}
+
+.faca-mais .faca-mais-img img {
+    width: 100%;
+    height: auto;
+}
+
+/* Depoimentos */
+.depoimentos h3 {
+    text-align: center;
+}
+
+.depoimentos p {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+}
+
+.depoimentos .card-item {
+    background-color: #f8f8f8; /* Fundo claro para os cards */
+    margin: 15px;
+    border-radius: 14px;
+    text-align: center;
+    width: 350px;
+    transition: 0.3s;
+}
+
+.depoimentos .card-item img {
+    border-radius: 100%;
+    width: 80px;
+    display: block;
+    margin: 10px auto;
+}
+
+.depoimentos .card-item .nome-user {
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.depoimentos .card-item .depoimento-user {
+    font-size: 15px;
+    padding: 0 15px;
+}
+
+.depoimentos .card-item .estrelas i {
+    color: #f8c500; /* Dourado para estrelas */
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+.depoimentos .card-item:hover {
+    background-color: #f1f1f1; /* Cor de fundo mais clara */
+}
+
+.depoimentos .card-item:hover .nome-user,
+.depoimentos .card-item:hover .depoimento-user,
+.depoimentos .card-item:hover .estrelas i {
+    color: #333333;
+}
+
+/* Rodapé */
+.footer {
+    background-color: #1b1b1b; /* Preto */
+    text-align: center;
+    padding: 20px;
+}
+
+.footer i {
+    color: #ffffff;
+    font-size: 19px;
+    background-color: #333333; /* Cinza escuro */
+    padding: 10px;
+    margin: 3px;
+    border-radius: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 830px) {
+    .ul {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #333333; /* Fundo escuro */
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        clip-path: circle(0% at 100% 0);
+        transition: clip-path 0.3s ease;
+    }
+    
+    .ul.open {
+        clip-path: circle(141.4% at 100% 0);
+    }
+    
+    .ul a {
+        margin: 10px 0;
+        font-size: 16px;
+    }
+
+    nav .menu-icon {
+        display: block;
+    }
+
+    nav .close-icon {
+        display: block;
+        position: absolute;
+        top: 46px;
+        right: 28px;
+    }
+}
+
+/* Adicionando estilo para a página sobre */
+.sobre {
+    padding: 50px 0;
+    background-color: #ffffff; /* Fundo branco */
+    text-align: center;
+}
+
+.sobre h1 {
+    font-size: 60px;
+    color: #4b2f86; /* Roxo suave */
+    margin-bottom: 20px;
+}
+
+.sobre p {
+    font-size: 20px;
+    color: #000000; /* Texto preto */
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+/* Detalhes sobre a missão, visão e valores */
+.sobre-detalhes {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.sobre-detalhes div {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+}
+
+.sobre-detalhes h3 {
+    font-size: 30px;
+    color: #4b2f86; /* Roxo suave */
+    margin-bottom: 15px;
+}
+
+.sobre-detalhes p {
+    font-size: 18px;
+    color: #777;
+}
+
+.sobre-detalhes ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sobre-detalhes ul li {
+    font-size: 18px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+/* Estilos para a seção equipe */
+.equipe {
+    padding: 50px 0;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.equipe h2 {
+    font-size: 45px;
+    color: #4b2f86; /* Roxo suave */
+    margin-bottom: 20px;
+}
+
+.equipe p {
+    font-size: 20px;
+    color: #777;
+    margin-bottom: 40px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card-item {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.card-item img {
+    border-radius: 50%;
+    width: 80px;
+}
+
+.servico-img img {
+    max-width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+/* Estilo geral */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+/* Cabeçalho */
+header {
+    background-size: cover;
+    background-position: center;
+    padding: 60px 0;
+    color: white;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+header .ul {
+    display: flex;
+    list-style: none;
+}
+
+header .ul a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+header .ul a.active {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Seção de Serviços */
+.servicos {
+    padding: 40px 20px;
+    background-color: #ffffff;
+}
+
+.servicos .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.servicos h1 {
+    font-size: 2.5rem;
+    color: #4b2f86; /* Roxo suave */
+    margin-bottom: 20px;
+}
+
+.servicos p {
+    font-size: 1.2rem;
+    color: #000000; /* Texto preto */
+    margin-bottom: 40px;
+}
+
+/* Layout Flexbox para os serviços */
+.servicos-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+/* Estilo dos itens de serviço */
+.servico-item {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 350px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+}
+
+.servico-img img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.servico-text h3 {
+    font-size: 1.5rem;
+    color: #4b2f86; /* Roxo suave */
+    margin-top: 20px;
+}
+
+.servico-text p {
+    font-size: 1rem;
+    color: #777;
+    margin-top: 10px;
+}
+
+/* Rodapé */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer .links a {
+    color: white;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.footer .links a:hover {
+    color: #f0f0f0;
+}
